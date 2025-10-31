@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'constansts/color_manger.dart';
@@ -10,22 +9,22 @@ ThemeData getApplicationTheme() {
   return ThemeData(
     useMaterial3: false, // set true if using Material 3
     // ===== Main colors =====
-    primaryColor: ColorsManager.primary,
-    primaryColorLight: ColorsManager.primaryLight,
-    primaryColorDark: ColorsManager.primaryDark,
-    disabledColor: ColorsManager.textSecondary,
-    splashColor: ColorsManager.primaryDark,
-    scaffoldBackgroundColor: ColorsManager.whiteColor,
+    primaryColor: ColorManager.primary,
+    primaryColorLight: ColorManager.primaryLight,
+    primaryColorDark: ColorManager.primaryDark,
+    disabledColor: ColorManager.textSecondary,
+    splashColor: ColorManager.primaryDark,
+    scaffoldBackgroundColor: ColorManager.whiteColor,
 
     colorScheme: ColorScheme.fromSwatch().copyWith(
-      secondary: ColorsManager.primaryDark,
-      error: ColorsManager.errorColor,
+      secondary: ColorManager.primaryDark,
+      error: ColorManager.errorColor,
     ),
 
     // ===== Card Theme =====
     cardTheme: CardThemeData(
-      color: ColorsManager.whiteColor,
-      shadowColor: ColorsManager.subtitleText,
+      color: ColorManager.whiteColor,
+      shadowColor: ColorManager.subtitleText,
       elevation: AppSize.s4,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(AppSize.s8),
@@ -35,11 +34,11 @@ ThemeData getApplicationTheme() {
     // ===== AppBar Theme =====
     appBarTheme: AppBarTheme(
       centerTitle: true,
-      backgroundColor: ColorsManager.primary,
+      backgroundColor: ColorManager.primary,
       elevation: AppSize.s4,
-      iconTheme: IconThemeData(color: ColorsManager.whiteColor),
+      iconTheme: IconThemeData(color: ColorManager.whiteColor),
       titleTextStyle: getSemiBoldStyle(
-        color: ColorsManager.whiteColor,
+        color: ColorManager.whiteColor,
         fontSize: FontSize.s16,
       ),
     ),
@@ -47,18 +46,18 @@ ThemeData getApplicationTheme() {
     // ===== Button Theme =====
     buttonTheme: ButtonThemeData(
       shape: const StadiumBorder(),
-      disabledColor: ColorsManager.textSecondary,
-      buttonColor: ColorsManager.primary,
-      splashColor: ColorsManager.primaryDark,
+      disabledColor: ColorManager.textSecondary,
+      buttonColor: ColorManager.primary,
+      splashColor: ColorManager.primaryDark,
     ),
 
     // ===== Elevated Button Theme =====
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: ColorsManager.primary,
-        foregroundColor: ColorsManager.whiteColor,
+        backgroundColor: ColorManager.primary,
+        foregroundColor: ColorManager.whiteColor,
         textStyle: getRegularStyle(
-          color: ColorsManager.whiteColor,
+          color: ColorManager.whiteColor,
           fontSize: FontSize.s16,
         ),
         shape: RoundedRectangleBorder(
@@ -74,86 +73,75 @@ ThemeData getApplicationTheme() {
     // ===== Text Theme =====
     textTheme: TextTheme(
       headlineLarge: getSemiBoldStyle(
-        color: ColorsManager.blackColor,
+        color: ColorManager.blackColor,
         fontSize: FontSize.s20,
       ),
       titleMedium: getMediunStyle(
-        color: ColorsManager.blackColor,
+        color: ColorManager.blackColor,
         fontSize: FontSize.s16,
       ),
       bodyMedium: getRegularStyle(
-        color: ColorsManager.blackColor,
+        color: ColorManager.blackColor,
         fontSize: FontSize.s14,
       ),
       bodySmall: getRegularStyle(
-        color: ColorsManager.subtitleText,
+        color: ColorManager.subtitleText,
         fontSize: FontSize.s12,
       ),
       labelLarge: getSemiBoldStyle(
-        color: ColorsManager.primary,
+        color: ColorManager.primary,
         fontSize: FontSize.s14,
       ),
     ),
 
     // ===== Cursor & Selection Colors =====
     textSelectionTheme: TextSelectionThemeData(
-      cursorColor: ColorsManager.primary,
-      selectionColor: ColorsManager.primary.withValues(alpha: 0.1),
-      selectionHandleColor: ColorsManager.primary,
+      cursorColor: ColorManager.primary,
+      selectionColor: ColorManager.primary.withValues(alpha: 0.1),
+      selectionHandleColor: ColorManager.primary,
     ),
 
     // ===== Input Field Theme =====
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: ColorsManager.whiteColor,
-      hintStyle: getRegularStyle(color: ColorsManager.textSecondary),
-      labelStyle: getMediunStyle(color: ColorsManager.blackColor),
-      helperStyle: getRegularStyle(color: ColorsManager.blackColor),
-      errorStyle: getRegularStyle(color: ColorsManager.errorColor),
+      fillColor: ColorManager.whiteColor,
+      hintStyle: getRegularStyle(color: ColorManager.textSecondary),
+      labelStyle: getMediunStyle(color: ColorManager.blackColor),
+      helperStyle: getRegularStyle(color: ColorManager.blackColor),
+      errorStyle: getRegularStyle(color: ColorManager.errorColor),
       contentPadding: const EdgeInsets.all(AppPadding.p12),
 
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(
-          color: ColorsManager.borderColor,
+          color: ColorManager.borderColor,
           width: AppSize.s1_5,
         ),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(AppSize.s8),
-        ),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
       ),
       focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(
-          color: ColorsManager.borderColor1,
+          color: ColorManager.borderColor1,
           width: AppSize.s1_5,
         ),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(AppSize.s8),
-        ),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
       ),
       errorBorder: OutlineInputBorder(
         borderSide: BorderSide(
-          color: ColorsManager.errorColor,
+          color: ColorManager.errorColor,
           width: AppSize.s1_5,
         ),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(AppSize.s8),
-        ),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
       ),
       focusedErrorBorder: OutlineInputBorder(
         borderSide: BorderSide(
-          color: ColorsManager.errorColor,
+          color: ColorManager.errorColor,
           width: AppSize.s1_5,
         ),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(AppSize.s8),
-        ),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
       ),
     ),
 
     // ===== Icon Theme =====
-    iconTheme: IconThemeData(
-      color: ColorsManager.primary,
-      size: AppSize.s24,
-    ),
+    iconTheme: IconThemeData(color: ColorManager.primary, size: AppSize.s24),
   );
 }

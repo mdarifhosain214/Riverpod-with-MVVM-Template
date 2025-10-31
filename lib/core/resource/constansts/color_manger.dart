@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 /// Centralized color palette for the app.
 /// Defines both light and dark theme colors.
-class ColorsManager {
-  ColorsManager._();
+class ColorManager {
+  ColorManager._();
 
   // ===== Primary Colors =====
   static const Color primary = Color(0xFF00136B);
