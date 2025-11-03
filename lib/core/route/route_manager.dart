@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_structure/core/resource/app_strings.dart';
-import '../../presentation/user/view/user_list_screen.dart';
+import '../../presentation/bottom_nav/view/bottom_nav_bar_screen.dart';
+
 class Routes{
   static const String splashRoute="/";
   static const String onBoadingRoute="/onBoading";
@@ -14,7 +15,7 @@ class RouteGenerator{
   static Route<dynamic>getRoute(RouteSettings routeSettings){
     switch (routeSettings.name) {
       case Routes.splashRoute:
-      return MaterialPageRoute(builder: (_)=>const UserListScreen());
+      return MaterialPageRoute(builder: (_)=>const BottomNavBarScreen());
       //  case Routes.loginRoute:
       // return MaterialPageRoute(builder: (_)=>LoginScreen());
       
