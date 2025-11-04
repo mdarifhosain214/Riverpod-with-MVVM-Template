@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class BottomNavBarScreen extends StatefulWidget {
+class BottomNavBarScreen extends ConsumerStatefulWidget {
   const BottomNavBarScreen({super.key});
 
   @override
-  State<BottomNavBarScreen> createState() => _BottomNavBarScreenState();
+  ConsumerState<BottomNavBarScreen> createState() => _BottomNavBarScreenState();
 }
 
-class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
+class _BottomNavBarScreenState extends ConsumerState<BottomNavBarScreen> {
   final List<Widget> _screenList = [
     Scaffold(body: Center(child: Text("Home"))),
     Scaffold(body: Center(child: Text("dangerous"))),
