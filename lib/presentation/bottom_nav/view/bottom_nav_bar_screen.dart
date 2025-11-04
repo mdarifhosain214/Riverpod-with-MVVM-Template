@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../viewmodel/bottom_nav_bar_viewmodel.dart';
+
 class BottomNavBarScreen extends ConsumerStatefulWidget {
   const BottomNavBarScreen({super.key});
 
@@ -18,8 +20,9 @@ class _BottomNavBarScreenState extends ConsumerState<BottomNavBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _screenList[0],
+      body: _screenList[ref.watch(bottomNavBarProvider)],
       bottomNavigationBar: BottomNavigationBar(
+        onTap: ref.read(bottomNavBarProvider.notifier).onItemTapped,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home)),
           BottomNavigationBarItem(icon: Icon(Icons.dangerous)),
