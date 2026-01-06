@@ -11,7 +11,7 @@ class UserApiService {
   UserApiService({required this.apiClient});
 
   Future<List<UserModel>> fetchUsers() async {
-    final Response response = await apiClient.getRequest(endpoints:  ApiEndpoints.register);
+ Response response = await apiClient.getRequest(endpoints:  ApiEndpoints.register);
     final List data = response.data as List;
     return data.map((json) => UserModel.fromJson(json)).toList();
   }
