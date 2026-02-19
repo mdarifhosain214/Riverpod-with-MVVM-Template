@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Riverpod MVVM Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       onGenerateRoute: RouteGenerator.getRoute,
-      initialRoute: Routes.splashRoute,
+      initialRoute: RoutesName.splashRoute,
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppColors {
+class ColorManager {
   // static ColorScheme darkColorScheme = ColorScheme(
   //   brightness: Brightness.dark,
   //   primary: Color(0xffffffff),
