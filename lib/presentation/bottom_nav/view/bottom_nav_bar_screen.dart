@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_structure/core/resource/constansts/color_manger.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../viewmodel/bottom_nav_bar_viewmodel.dart';
@@ -22,12 +23,13 @@ class _BottomNavBarScreenState extends ConsumerState<BottomNavBarScreen> {
     return Scaffold(
       body: _screenList[ref.watch(bottomNavBarProvider)],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: ColorManager.background,
         onTap: ref.read(bottomNavBarProvider.notifier).onItemTapped,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home)),
-          BottomNavigationBarItem(icon: Icon(Icons.dangerous)),
-          BottomNavigationBarItem(icon: Icon(Icons.search)),
-          BottomNavigationBarItem(icon: Icon(Icons.settings)),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.dangerous), label: "dangerous"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "settings"),
         ],
       ),
     );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_structure/core/resource/app_strings.dart';
-import '../../presentation/bottom_nav/view/bottom_nav_bar_screen.dart';
+import 'package:flutter_app_structure/presentation/bottom_nav/view/bottom_nav_bar_screen.dart';
+import 'package:flutter_app_structure/presentation/splash/view/splash_screen.dart';
+
 
 class RoutesName {
   static const String splashRoute = "/";
@@ -8,16 +10,16 @@ class RoutesName {
   static const String loginRoute = "/login";
   static const String registerRoute = "/register";
   static const String forgotPasswordRoute = "/forgotPassword";
-  static const String storeDetailsRoute = "/storeDetails";
+  static const String bottomNavRoute = "/bottomNav";
 }
 
 class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
       case RoutesName.splashRoute:
-        return MaterialPageRoute(builder: (_) => const BottomNavBarScreen());
-      //  case Routes.loginRoute:
-      // return MaterialPageRoute(builder: (_)=>LoginScreen());
+        return MaterialPageRoute(builder: (_) => const SplashScreen());
+       case RoutesName.bottomNavRoute:
+      return MaterialPageRoute(builder: (_)=>BottomNavBarScreen());
 
       default:
         return unDefineRoute();
