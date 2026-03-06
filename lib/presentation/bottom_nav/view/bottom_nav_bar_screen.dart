@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_structure/core/resource/constansts/color_manger.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/resource/constansts/color_manger.dart';
 import '../viewmodel/bottom_nav_bar_viewmodel.dart';
 
 class BottomNavBarScreen extends ConsumerStatefulWidget {

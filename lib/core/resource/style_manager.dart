@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_structure/core/resource/font_manager.dart';
+
+import 'font_manager.dart';
+
 
 TextStyle _getTextStyle(
   double fontSize,
